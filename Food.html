@@ -1,0 +1,499 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta http-equiv="X-UA-Compatible" content="IE=edge">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>THERAPIDCREW</title>
+  <link rel="stylesheet" media="screen and (max-width:1170px)" href="main.css">
+  <style>
+    *{
+      margin: 0;
+      padding: 0;
+    }
+    .navbar{
+      position: relative;
+    }
+    .navbar::before{
+      content:"";
+      background-color: brown;
+      position: absolute;
+      height: 100%;
+      width: 100%;
+      z-index:-1;
+      opacity: 0.8;
+
+    }
+    .navbar{
+      display: flex;
+      align-items: center;
+      position: absolute;
+
+    }
+    #logo{
+      margin: 10px,34px;
+    }
+
+    #logo img{
+      height: 100px;
+      margin: 3px,6px;
+      width: 100px;
+    }
+
+    .navbar ul{
+      display: flex;
+    }
+    .navbar li{
+      list-style: none; 
+      margin: 30px;
+     
+      
+    }
+    .navbar li a{
+      color: black;
+      font-size: 1.5rem;
+      padding: 25px;
+     text-decoration: none;
+    }
+    .navbar li a:hover{
+      color: blueviolet;
+      background-color: white;
+      background-size: 1px;
+      border-radius: 35px;
+      
+
+    }
+    .home{
+      display: flex;
+      flex-direction: column;
+      padding: 3px 240px;
+      justify-content: center;
+      align-items: center;
+      height: 710px;
+    }
+    .home::before{
+      content:"";
+      background: url(https://images.pexels.com/photos/286283/pexels-photo-286283.jpeg?auto=compress&cs=tinysrgb&w=1260&h=750&dpr=1)no-repeat center center/cover;
+      position: absolute;
+      height: 100%;
+      width: 100%;
+      z-index:-1;
+      opacity: 0.9;
+
+
+    }
+    .home h1{
+      color: white;
+      text-align: center;
+      font-family: 'Courier New', Courier, monospace;
+    }
+    .home p{
+      color: black;
+      text-align: center;
+      font-size: 1.8rem;
+    }
+    .heading{
+      font-size: 4rem;
+      padding: 12px;
+     
+    }
+    .btn{
+      padding: 6px 20px;
+      border: 2px solid white;
+      background-color:brown;
+      margin: 17px;
+      font-size: 1rem;
+      border-radius: 10px;
+      cursor: pointer;
+
+    }
+
+    
+    #services{
+      margin: 35px;
+      display: flex;
+    }
+    .box{
+      border: 2px solid brown;
+      padding: 34px;
+      margin: 3px 6px;
+      border-radius: 28px;
+      background-color: antiquewhite;
+    }
+    .box img{
+      height: 180px;
+      width: 240px;
+      margin: auto;
+      display: block;
+    }
+    .secondary-heading{
+      text-align: center;}
+
+     .servicesheading{
+       text-align: center;
+       font-family: auto;
+       font-size: 2rem;
+     }
+
+     .center{
+       font-family: auto;
+     }
+
+     .client-heading{
+       text-align: center;
+     }
+
+     .clients{
+       display: flex;
+       justify-content: center;
+       align-items: center;
+
+
+     }
+     .clients::before{
+       content: "";
+       position: absolute;
+       background: url(https://images.pexels.com/photos/128402/pexels-photo-128402.jpeg?auto=compress&cs=tinysrgb&dpr=2&h=650&w=940);
+       height: 40%;
+       width: 100%;
+       z-index: -1;
+       opacity: 0.8;
+     }
+     .clients img{
+       height: 230px;
+       width: 240px;
+     }
+
+     .client-items{
+       padding: 35px;
+     }
+     .contactus{
+       text-align: center;
+     }
+
+     #contact::before{
+      content: "";
+       position: absolute;
+       background: url(https://cdn.pixabay.com/photo/2015/01/02/00/01/telephone-586268_960_720.jpg)no-repeat center center/cover;
+       height: 75%;
+       width: 100%;
+       z-index: -1;
+       opacity: 0.5;
+
+     }
+
+     footer{
+      background-color:black;
+      color: white;
+       padding: 9px 20px;
+       text-align: center;
+     }
+
+     .contact-box{
+       display: flex;
+       justify-content: center;
+       align-items: center;
+       padding-bottom: 35px;
+     }
+
+     .contact-box input,
+     .contact-box textarea{
+       width: 100%;
+       padding: 0.5rem;
+       border-radius: 9px;
+       font-size: 1.1rem;
+     }
+
+     .contact-box form{
+       width: 40%;
+     }
+     .contact-box label{
+       font-size: 1.3rem;
+       font-family: 'Courier New', Courier, monospace;
+     }
+      
+     .search{
+       padding: 30px 35px;
+      
+
+      color: white;
+    
+      
+     
+     
+       
+     }
+
+     .btn1{
+
+      padding: 2px 10px;
+      
+      border: 2px solid maroon;
+      background-color: bisque;
+      margin: 20px;
+      font-size: 1rem;
+      border-radius: 10px;
+      cursor: pointer;
+     }
+
+     .btn4{
+      padding: 10px;
+      
+      border: 3px solid white;
+      background-color: rgba(94, 17, 17, 0.808);
+      margin: 20px;
+      font-size: 1.7rem;
+      border-radius: 10px;
+      cursor: pointer;
+
+     }
+
+     .btn5{
+
+      padding: 7px;
+      
+      border: 3px solid maroon;
+      background-color: bisque;
+      margin: 10px;
+      font-size: 1.2rem;
+      border-radius: 10px;
+      cursor: pointer;
+
+     }
+
+     a{
+       text-decoration: none;
+       color: black;
+     }
+
+     a:hover{
+       color: antiquewhite;
+       background-color: rgba(46, 12, 12, 0.808);
+     }
+
+     .container1{
+       background-color: maroon;
+     }
+
+
+    
+     label{
+       color: white;
+       font-size: 1.1rem;
+       padding-left: 30px;
+     }
+
+     option{
+       color: black;
+       font-family: Arial, Helvetica, sans-serif;
+       font-size: 1rem;
+     }
+    
+  </style>
+</head>
+<body>
+  <nav class="navbar">
+    
+
+
+<ul>
+    <li class="item"><a href="#"> <strong>Home</strong></a></li>
+    <li class="item"><a href="Order.html"><strong>Services</strong></a></li>
+    <li class="item"><a href="https://www.instagram.com/x_arhamk/" target="_blank"><strong>About Us</strong></a></li>
+    <li class="item"><a href= "conntinue.html" target="_blank"><strong>Contact Us</strong></a></li> 
+
+    <div class="search">
+      <input list="browsers" name="myBrowser" placeholder="Search restaurants" /></label>
+<datalist id="browsers">
+  <option value="KFC">
+  <option value="McDonalds">
+  <option value="Persian Durbar">
+  <option value="Baba Falooda">
+  <option value="Socials">
+  <option value="Episode 1">
+    <option value="Jumboking">
+      <option value="Dominoes">
+      <option value="Pizza Hut">
+     
+</datalist>
+
+
+       
+        
+      </select>
+    </div>
+
+    
+  
+  
+  </ul>
+
+  
+
+  </nav>
+  <section class="home">
+    <h1 class="heading">THE RAPID CREW</h1>
+    <P>Welcome Dear Customer!</P>
+    <p>You can place order from your nearby restaurants and supermarkets for tasty food and fresh groceries</p>
+    <button class="btn">Order Now</button>
+    <div>
+
+      <a href="https://accounts.google.com/ServiceLogin/signinchooser?service=mail&passive=true&rm=false&continue=https%3A%2F%2Fmail.google.com%2Fmail%2F&ss=1&scc=1&ltmpl=default&ltmplcache=2&emr=1&osid=1&flowName=GlifWebSignIn&flowEntry=ServiceLogin" class="btn1" target="_blank">Log in</a>
+      <a href="https://accounts.google.com/signup/v2/webcreateaccount?flowName=GlifWebSignIn&flowEntry=SignUp" class="btn1" target="_blank">Sign in</a>
+      
+    </div>
+
+    <button class="btn4"> Enter your Delievery location below </button>
+    <div>
+
+      <a href="https://my.atlistmaps.com/map/acb18593-b8b2-41e4-a5a6-2f969abc7f23?marker_id=6f256d1a-7a4e-40c1-85a7-6dbde6c68b68" class="btn5" target="_blank">Search location</a>
+      <a href="https://support.google.com/foodordering/answer/9754365?hl=en" class="btn5" target="_blank">Track your Delievery</a>
+      
+    </div>
+
+    
+
+  </section>
+
+  <section class="services-container">
+    <h1 class="servicesheading">
+      Our Services
+    </h1>
+
+    <div id="services">
+      <div class="box">
+        <img src="https://images.pexels.com/photos/2147491/pexels-photo-2147491.jpeg?auto=compress&cs=tinysrgb&w=1260&h=750&dpr=1" alt="">
+        <h2 class="secondary-heading">Food ordering</h2>
+        <p id="Fn1" class="center">You can place your order from different restaurants nearby your location. You will be delievered hot and tasty food within the given time limit. </p>
+      </div>
+      <div class="box">
+        <img src="https://images.pexels.com/photos/128402/pexels-photo-128402.jpeg?auto=compress&cs=tinysrgb&dpr=2&h=650&w=940" alt="">
+        <h2 class="secondary-heading">Grocery Shopping</h2>
+        
+          <p id="Fn2" class="center">You can also order groceries from different supermarkets near your location. You will be delievered fresh groceries within the given time limit. </p>
+        
+      </div>
+      
+      <div class="box">
+        <img src="https://images.pexels.com/photos/1854652/pexels-photo-1854652.jpeg?auto=compress&cs=tinysrgb&w=1260&h=750&dpr=1" alt="">
+        <h2 class="secondary-heading">Bulk ordering</h2>
+        <p id="Fn3" class="center">Offering you our bulk food ordering services for small party, personal get together, pooja, house parties, Delicious food for celebration. Now Order your favorite Tasty Food From our extensive multicuisine menu by the kilo.</p>
+      </div>
+
+    </div>
+  </section>
+
+  <section class="client-section">
+    <h1 class="client-heading">Popular Restaurants</h1>
+
+    <div class="clients">
+      <div class="client-items">
+        <img src="https://images.pexels.com/photos/3028127/pexels-photo-3028127.jpeg?auto=compress&cs=tinysrgb&dpr=2&h=650&w=940" alt="">
+      </div>
+
+      <div class="client-items">
+        <img src="https://images.pexels.com/photos/3070071/pexels-photo-3070071.jpeg?auto=compress&cs=tinysrgb&dpr=2&h=650&w=940" alt="">
+      </div>
+      <div class="client-items">
+        <img src="https://images.pexels.com/photos/2290786/pexels-photo-2290786.jpeg?auto=compress&cs=tinysrgb&dpr=2&h=650&w=940" alt="">
+      </div>
+      <div class="client-items">
+        <img src="https://images.pexels.com/photos/3714786/pexels-photo-3714786.jpeg?auto=compress&cs=tinysrgb&dpr=1&w=500" alt="">
+      </div>
+      <div class="client-items">
+        <img src="https://images.pexels.com/photos/776938/pexels-photo-776938.jpeg?auto=compress&cs=tinysrgb&dpr=1&w=500" alt="">
+      </div>
+      
+
+    </div>
+  </section>
+
+  <div>
+  <section id="contact">
+    <h1 class="contactus">Contact Us</h1>
+    <div class="contact-box">
+      <form action="">
+
+        <div class="form-group">
+          <label for="name">Name</label>
+          <input type="Name" name="name" id="name" placeholder="Enter your name">
+        </div>
+        <div class="form-group">
+          <label for="email">Email</label>
+          <input type="email" name="email" id="email" placeholder="Enter a valid email address">
+        </div>
+
+        <div class="form-group">
+          <label for="number">Contact number</label>
+          <input type="number"="number" id="number" placeholder="Your contact number ">
+        </div>
+
+        <div class="form-group">
+          <label for="text">Review</label>
+         <textarea name="text" id="text" cols="30" rows="10" placeholder="Your Review matters the most"></textarea>
+        </div>
+
+
+
+
+
+
+      </form>
+    </div>
+  </section>
+
+</div>
+
+
+  
+
+
+
+  
+
+
+  <footer>
+
+   
+
+     
+      
+
+      <div class="outer-footer">
+        Copyright &copy; THERAPIDCREWOfficialsite.com. All rights Reserved
+      </div>
+  
+
+  </footer>
+
+  <script>
+    let name=prompt("Enlighten us with your name!!","dear guest");
+
+    let Fn1=document.getElementById('Fn1');
+    Fn1.addEventListener('mouseover',function run(){
+      alert('You get additional 25% Discounts on your first 3 orders!!!!');
+    });
+
+    let Fn2=document.getElementById('Fn2');
+    Fn2.addEventListener('mouseover',function run1(){
+      alert('Ordering via Paytm gives an additional 40% cashback');
+    });
+
+    let Fn3=document.getElementById('Fn3');
+    Fn3.addEventListener('mouseover',function run2(){
+      alert('For orders worth Rs 2000 and more, RAPID CREW gives 25% off!!!');
+    });
+  </script>
+
+
+
+
+  
+
+  
+
+ 
+
+
+</body>
+</html>
